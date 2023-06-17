@@ -1,8 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/**
- * main -n this is where the program is written
+/*
  * Description:'Checks given random numbers to see if they meet given criteria'
  * Return: 0 if positive else any other non zero value
  */
