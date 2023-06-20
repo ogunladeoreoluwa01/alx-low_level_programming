@@ -1,6 +1,10 @@
 #include <unistd.h>
 #include "main.h"
-
+/**
+ * times_table - prints out the 9 times table
+ * Return: Nothing
+ * @void: nothing to return
+ */
 void times_table(void)
 {
 	int a, b, c, d;

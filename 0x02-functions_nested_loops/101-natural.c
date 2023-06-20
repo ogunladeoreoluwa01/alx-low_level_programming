@@ -1,5 +1,9 @@
 #include <stdio.h>
-
+/**
+ * main - Pritns all natural numbers below 1024
+ * Description:'Prints the multiples of 3 and 5'
+ * Return: 0 if correct
+ */
 int main(void)
 {
 	int num1, num2;

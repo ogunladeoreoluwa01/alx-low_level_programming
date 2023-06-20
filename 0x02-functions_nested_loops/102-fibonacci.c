@@ -1,5 +1,9 @@
 #include <stdio.h>
-
+/**
+ * main - print fibonacci sequence
+ * Description:'a program to print fibonacci series'
+ * Return: nothing
+ */
 int main(void)
 {
 	int count;

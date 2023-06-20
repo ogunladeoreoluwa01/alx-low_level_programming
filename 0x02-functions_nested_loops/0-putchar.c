@@ -1,7 +1,11 @@
 #include <unistd.h>
 #include <stdio.h>
 #include "main.h"
-
+/**
+ * main - prints putchar
+ * Description:'Prints putchar'
+ * Return: 0 if successful
+ */
 int main(void)
 {
 	_putchar('_');

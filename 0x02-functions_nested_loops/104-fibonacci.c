@@ -1,5 +1,9 @@
 #include <stdio.h>
-
+/**
+ * main - prints out the fibonacci to the 98th term
+ * Description:'prints fibonacci'
+ * Return: 0 if success
+ */
 int main(void)
 {
 	int count = 2;

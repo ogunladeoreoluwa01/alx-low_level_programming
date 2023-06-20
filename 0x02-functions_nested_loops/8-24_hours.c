@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include "main.h"
-
+/**
+ * jack_bauer - prints out all the minutes of the day
+ * Return: 0 if successful
+ * @void: data type of the values being printed out
+ */
 void jack_bauer(void)
 {
 	int t, u;
