@@ -2,15 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - Generates random passwords for the program 101-crackme.
- *
- * Description:
- * This program generates random passwords for the program 101-crackme.
- * It utilizes the time library to seed the random number generator
- * and generate unique passwords each time the program is executed.
- *
- * Return:
- * 0 if the program executes successfully, a non-zero value otherwise.
+ * main - it generates random passwords for the program 101-crackme
+ * Description:'A program'
+ * Return: 0 if successful, else a non zero value
  */
 int main(void)
 {

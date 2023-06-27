@@ -1,25 +1,18 @@
 #include <stdio.h>
 #include "main.h"
-
 /**
- * puts2 - Prints every other character of a string.
- * Description: This function takes a pointer to a string as a parameter
- *              and prints every other character of the string,
- *              starting from the first character.
- * @str: Pointer to the string to be processed.
- * Return: Nothing.
+ * puts2 - prints out every other element of the string
+ * Description:'A function'
+ * @str: the string to be checked
+ * Return: nothing
  */
 void puts2(char *str)
 {
-	int i;
+	int i, k;
 
-	/* Calculate the length of the string */
 	for (i = 0; str[i] != '\0'; i++)
 		;
-
-	/* Print every other character of the string */
-	for (i = 0; str[i] != '\0'; i += 2)
-		_putchar(str[i]);
-
+	for (k = 0; k < i; k += 2)
+		_putchar(str[k]);
 	_putchar('\n');
 }
