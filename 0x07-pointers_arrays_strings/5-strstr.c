@@ -1,15 +1,12 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
- * _strstr - Locates a substring within a string
- * @haystack: The string to search
- * @needle: The substring to find
- *
- * Description: This function searches for the first occurrence of the substring
- *              within the given string and returns a pointer to it.
- *
- * Return: Pointer to the beginning of the substring within the string, or NULL if not found.
- */
+  * _strstr - locate a substring
+  * @haystack: the string to search
+  * @needle: the string to find
+  *
+  * Return: char value
+  */
 char *_strstr(char *haystack, char *needle)
 {
 	int a = 0, b = 0;
