@@ -1,14 +1,9 @@
 #include "main.h"
 
 /**
- * _strlen_recursion - Calculates the length of a string using recursion.
- *
- * Description: This function recursively calculates the length of a string
- *              by counting the number of characters until it reaches the null terminator ('\0').
- *
- * @s: The string for which the length is calculated.
- *
- * Return: The length of the string.
+ * _strlen_recursion - returns the length of a string.
+ * @s: string
+ * Return: the length of a string.
  */
 int _strlen_recursion(char *s)
 {

@@ -1,19 +1,10 @@
 #include "main.h"
 
 /**
- * wildcmp - Compares two strings, allowing for wildcard character '*'.
- *
- * Description: This function recursively compares two strings character by character.
- *              It allows for a wildcard character '*' in the second string, which can match
- *              any sequence of characters (including an empty sequence) in the first string.
- *              If the strings are identical or if the wildcard pattern matches the first string,
- *              it returns 1. Otherwise, it returns 0.
- *
- * @s1: The first string to be compared.
- * @s2: The second string with wildcard pattern.
- *
- * Return: 1 if the strings are identical or if the wildcard pattern matches the first string,
- *         0 otherwise.
+ * wildcmp - compares two strings.
+ * @s1: string 1.
+ * @s2: string 2. It can contains a * as a special character.
+ * Return: 1 if are identical, 0 if not.
  */
 int wildcmp(char *s1, char *s2)
 {

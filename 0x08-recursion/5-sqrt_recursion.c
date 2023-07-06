@@ -1,18 +1,10 @@
 #include "main.h"
 
 /**
- * power_operation - Calculates the natural square root of a number using recursion.
- *
- * Description: This function recursively calculates the square root of a number
- *              by iteratively checking if the square of the current iterator 'c'
- *              is equal to the input number 'n'. If found, it returns the iterator.
- *              If the iterator exceeds the half of the input number without finding
- *              the exact square root, it returns -1 to indicate failure.
- *
- * @n: The input number for which the square root is calculated.
- * @c: The iterator used to find the square root.
- *
- * Return: The square root of the number if found, or -1 if the square root is not a natural number.
+ * power_operation -> returns the natural square root of a number.
+ * @n: input number
+ * @c: iterator
+ * Return: square root or -1
  */
 int power_operation(int n, int c)
 {
