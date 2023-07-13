@@ -9,9 +9,9 @@ void get_prod(char *prod, char *mult, int digit, int zeroes);
 void add_nums(char *final_prod, char *next_prod, int next_len);
 
 /**
- * find_len - Calculates the length of a string.
- *
+ * find_len - Finds the length of a string.
  * @str: The string to be measured.
+ *
  * Return: The length of the string.
  */
 int find_len(char *str)

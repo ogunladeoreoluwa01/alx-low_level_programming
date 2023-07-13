@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * _memcpy - Copies a block of memory from source to destination
+ * *Memcpy - copies a memory address
  *
- * @dst: Pointer to the destination memory
- * @src: Pointer to the source memory
- * @cnt: Number of bytes to copy
- * Return: Pointer to the destination memory
+ * @dst: the destination
+ * @src: the source
+ * @cnt: the limit
+ * Return: a void pointer
  */
 void *Memcpy(void *dst, const void *src, unsigned int cnt)
 {

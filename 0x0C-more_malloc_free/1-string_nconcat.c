@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * _strlen - Calculates the length of a string
+ * _strlen - it gives us the lenght of a string
  *
- * @s: The string to calculate the length of
- * Return: The length of the string
+ * @s: the string
+ * Return: Nothing
  */
 int _strlen(char *s)
 {
@@ -60,4 +60,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	*(str + i) = '\0';
 	return (str);
 	free(str);
+
 }

@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * _memset - Sets a block of memory with a specified value
+ * *Memset - seta a memory address
  *
- * @s: Pointer to the memory to be set
- * @c: Value to set the memory with
- * @len: Number of bytes to set
- * Return: Pointer to the memory after setting
+ * @s: the memory to be set
+ * @c: the value
+ * @len: the limit
+ * Return: a pointer to the set memory
  */
 void *Memset(void *s, int c, unsigned int len)
 {
