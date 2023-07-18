@@ -1,7 +1,6 @@
 #ifndef DOH_H
 #define DOH_H
-#include <stdio.h>
-#include <stdlib.h>
+
 
 /**
  * struct dog - defines a new type of struct called dog
@@ -24,4 +23,4 @@ void free_dog(dog_t *d);
 int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
 
-#endif /*DOH_H*/
+#endif

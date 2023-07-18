@@ -2,7 +2,7 @@
 #include "dog.h"
 
 /**
- * main - Entry point of the program.
+ * main - check the code
  *
  * Return: Always 0.
  */
