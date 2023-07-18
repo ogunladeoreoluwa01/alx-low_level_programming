@@ -1,6 +1,7 @@
 #ifndef DOH_H
 #define DOH_H
-
+#include <stdio.h>
+#include "dog.h"
 
 /**
  * struct dog - defines a new type of struct called dog
@@ -15,6 +16,18 @@ struct dog
 	float age;
 	char *owner;
 };
+int main(void)
+{
+	struct dog my_dog;
+
+	my_dog.name = "Buddy";
+	my_dog.age = 2.5;
+	my_dog.owner = "Alice";
+
+	print_dog(&my_dog);
+
+	return 0;
+}
 void print_dog(struct dog *d);
 void init_dog(struct dog *d, char *name, float age, char *owner);
 typedef struct dog dog_t;
