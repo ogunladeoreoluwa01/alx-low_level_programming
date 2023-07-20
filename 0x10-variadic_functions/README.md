@@ -1,1 +1,3 @@
-My third and first emergency readme
+<!-- @format -->
+
+Mredme about varadic functions

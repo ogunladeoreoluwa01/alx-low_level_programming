@@ -1,6 +1,5 @@
 #include "variadic_functions.h"
 
-
 /**
  * print_char - Prints a character.
  * @args: The va_list of arguments.
@@ -46,7 +45,7 @@ void print_string(va_list args)
  * print_all - Prints anything based on the provided format.
  * @format: The list of types of arguments passed to the function.
  */
-void print_all(const char * const format, ...)
+void print_all(const char *const format, ...)
 {
     va_list args;
     unsigned int i = 0;
@@ -86,9 +85,4 @@ void print_all(const char * const format, ...)
 
     printf("\n");
     va_end(args);
-}
-int main(void)
-{
-    print_all("ceis", 'B', 3, "stSchool");
-    return (0);
 }
