@@ -1,88 +1,85 @@
 #include "variadic_functions.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
- * print_char - Prints a character.
- * @args: The va_list of arguments.
+ * print_int - prints int
+ * @list: arguments from print_all
  */
-void print_char(va_list args)
+void print_int(va_list list)
 {
-    printf("%c", va_arg(args, int));
+	printf("%d", va_arg(list, int));
 }
 
 /**
- * print_int - Prints an integer.
- * @args: The va_list of arguments.
+ * print_float - prints float
+ * @list: arguments from print_all
  */
-void print_int(va_list args)
+void print_float(va_list list)
 {
-    printf("%d", va_arg(args, int));
+	printf("%f", va_arg(list, double));
 }
 
 /**
- * print_float - Prints a float.
- * @args: The va_list of arguments.
+ * print_char - prints int
+ * @list: arguments from print_all
  */
-void print_float(va_list args)
+void print_char(va_list list)
 {
-    printf("%f", va_arg(args, double));
+	printf("%c", va_arg(list, int));
 }
 
 /**
- * print_string - Prints a string.
- * @args: The va_list of arguments.
+ * print_str - prints string
+ * @list: arguments from print_all
  */
-void print_string(va_list args)
+void print_str(va_list list)
 {
-    char *str = va_arg(args, char *);
+	char *s = va_arg(list, char *);
 
-    if (str == NULL)
-        printf("(nil)");
-    else
-        printf("%s", str);
+	s == NULL ? printf("(nil)") : printf("%s", s);
+
 }
 
 /**
- * print_all - Prints anything based on the provided format.
- * @format: The list of types of arguments passed to the function.
+ * print_all - prints any type
+ * @format: arguments to print
  */
-void print_all(const char *const format, ...)
+
+void print_all(const char * const format, ...)
 {
-    va_list args;
-    unsigned int i = 0;
-    char *separator = "";
+va_list list;
+int i = 0, j = 0;
+char *sep = "";
 
-    typedef struct type_handler
-    {
-        char format;
-        void (*func)(va_list);
-    } type_handler_t;
+printTypeStruct printType[] = {
+	{ "i", print_int },
+	{ "f", print_float },
+	{ "c", print_char },
+	{ "s", print_str },
+	{NULL, NULL}
+};
 
-    type_handler_t handlers[] = {
-        {'c', print_char},
-        {'i', print_int},
-        {'f', print_float},
-        {'s', print_string},
-    };
 
-    va_start(args, format);
+va_start(list, format);
 
-    while (format && format[i])
-    {
-        unsigned int j = 0;
-        while (j < 4)
-        {
-            if (format[i] == handlers[j].format)
-            {
-                printf("%s", separator);
-                handlers[j].func(args);
-                separator = ", ";
-                break;
-            }
-            j++;
-        }
-        i++;
-    }
+while (format && format[i])
+{
+	j = 0;
+	while (j < 4)
+	{
+		if (*printType[j].type == format[i])
+		{
+			printf("%s", sep);
+			printType[j].printer(list);
+			sep = ", ";
+			break;
+		}
+		j++;
+	}
+	i++;
+}
 
-    printf("\n");
-    va_end(args);
+printf("\n");
+va_end(list);
 }
