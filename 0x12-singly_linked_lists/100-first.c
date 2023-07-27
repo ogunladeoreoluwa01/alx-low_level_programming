@@ -3,10 +3,10 @@
 #include "lists.h"
 #include <unistd.h>
 /**
- * first - prints a sentence before the main
- * function is executed
+ * func_before_main - prints out sentences before the main function is executed
+ *
+ * Return: Nothing
  */
-
 void func_before_main(void) __attribute__((constructor));
 void func_before_main(void)
 {
