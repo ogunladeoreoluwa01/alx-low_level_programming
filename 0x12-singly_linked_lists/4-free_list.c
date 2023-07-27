@@ -2,10 +2,11 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
- * first - prints a sentence before the main
- * function is executed
+ * free_list - frees the memory allocated to a liinked list
+ *
+ * @head: the head of the linked list
+ * Return: Nothing
  */
-
 void free_list(list_t *head)
 {
 	list_t *temp;
