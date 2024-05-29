@@ -1,25 +1,30 @@
 #!/usr/bin/python3
-"""Tihs module contains the solution of no 5"""
-
 
 def island_perimeter(grid):
+    """
+    Calculates the perimeter of the island described in the grid.
 
-    ans = 0
-    let = len(grid)
-    size = len(grid[0])
-    for i in range(let):
-        for j in range(size):
+    Args:
+    - grid (List[List[int]]): A list of lists of integers representing the grid.
+
+    Returns:
+    - int: The perimeter of the island.
+    """
+    perimeter = 0
+    rows = len(grid)
+    cols = len(grid[0])
+
+    # Iterate through each cell in the grid
+    for i in range(rows):
+        for j in range(cols):
+            # Check if the current cell is part of the island
             if grid[i][j] == 1:
-                if j == 0 or j == size - 1:
-                    ans += 1
-                if i == 0 or i == let - 1:
-                    ans += 1
-                if (i - 1 >= 0) and grid[i - 1][j] == 0:
-                    ans += 1
-                if (i + 1 < let) and grid[i + 1][j] == 0:
-                    ans += 1
-                if (j - 1 >= 0) and grid[i][j - 1] == 0:
-                    ans += 1
-                if (j + 1 < size) and grid[i][j + 1] == 0:
-                    ans += 1
-    return ans
+                perimeter += 4  # Add 4 to the perimeter for each land cell
+
+                # Check adjacent cells (up, down, left, right)
+                if i > 0 and grid[i - 1][j] == 1:
+                    perimeter -= 2  # Subtract 2 if the cell above is land
+                if j > 0 and grid[i][j - 1] == 1:
+                    perimeter -= 2  # Subtract 2 if the cell to the left is land
+
+    return perimeter
